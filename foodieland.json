@@ -1,0 +1,1716 @@
+{
+	"info": {
+		"_postman_id": "8b7da383-a099-4a8b-b7a2-2f73d20e496f",
+		"name": "foodieland",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20669065"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "get all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/getAllCategory",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"getAllCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "categoryName",
+									"value": "Breakfast",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/breakfast.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/addCtegory",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"addCtegory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categorId\":\"6259181be97cacdcb0070edd\",\n    \"ownerId\":\"6258ecfc314d18757b049a63\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/deleteCategory",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"deleteCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "categoryName",
+									"value": "chocolate",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/istockphoto-1148258027-612x612.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/updateCategory?id=62592288fa265cad80b35c68",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"updateCategory"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62592288fa265cad80b35c68"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get category by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/getCategory?id=6258fc35e3b27fca01d12bf7",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"getCategory"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6258fc35e3b27fca01d12bf7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "recipes",
+			"item": [
+				{
+					"name": "add recipes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/istockphoto-157431311-612x612 (1).jpg"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/home/mangoit/Downloads/production ID_4122744.mp4"
+								},
+								{
+									"key": "userId",
+									"value": "6285e573400994c39b295553",
+									"type": "default"
+								},
+								{
+									"key": "categoryId",
+									"value": "6285e5e4400994c39b295559",
+									"type": "default"
+								},
+								{
+									"key": "cookTime",
+									"value": "25 Minutes",
+									"type": "default"
+								},
+								{
+									"key": "prepTime",
+									"value": "30 Minutes",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "barbeque spicy sandwitch with chips",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+									"type": "default"
+								},
+								{
+									"key": "nutritionInformation[calories]",
+									"value": "207.9kcal",
+									"contentType": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "nutritionInformation[totalFat]",
+									"value": "10.7gm",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "nutritionInformation[protein]",
+									"value": "22.3gm",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "nutritionInformation[carbohydrate]",
+									"value": "7.109gm",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "nutritionInformation[cholesterol]",
+									"value": "30.gm",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "nutritionInformation[nutritionTitle]",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "ingredient[forMainDish]",
+									"value": "Main Dishtext1",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "ingredient[forMainDish]",
+									"value": "Main Dishtext2",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "ingredient[forMainDish]",
+									"value": "Main Dishtext 3",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "ingredient[sauce]",
+									"value": "saucetext1",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "ingredient[sauce]",
+									"value": "saucetext2",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "direction[0][directionTitle]",
+									"value": "direction title 1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "direction[0][directionDescription]",
+									"value": "direction desription 1",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "direction[0][directionImage]",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/vegan.jpg",
+									"disabled": true
+								},
+								{
+									"key": "direction[1][directionTitle]",
+									"value": "direction title 2",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "direction[1][directionDescription]",
+									"value": "direction description 2",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "direction[1][directionImage]",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/68615311.jpeg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/addRecipes",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"addRecipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status / delete",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipeId\":\"625d4e20b5c7276ed2d1d598\",\n    \"ownerId\":\"625d4cecb5c7276ed2d1d575\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/recipesChangeStatus?status=approved",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"recipesChangeStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "approved"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update recipe",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/photo-1585032226651-759b368d7246.jpeg"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/home/mangoit/Downloads/production ID_4122744.mp4"
+								},
+								{
+									"key": "userId",
+									"value": "625d07eaaec0f2807df6718d",
+									"type": "default"
+								},
+								{
+									"key": "categoryId",
+									"value": "625d07e864d58de3501e1d86",
+									"type": "default"
+								},
+								{
+									"key": "cookTime",
+									"value": "20 Minutes",
+									"type": "default"
+								},
+								{
+									"key": "prepTime",
+									"value": "20 Minutes",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "testing11111",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "testing11111111",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/editRecipe?id=625d2068a58c0671f37fb658",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"editRecipe"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "625d2068a58c0671f37fb658"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all recipes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/v1/getAllRecipes",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"v1",
+								"getAllRecipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get recipeDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/recipeDetails?id=6260f69f2e093195e74fe4f8",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"recipeDetails"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6260f69f2e093195e74fe4f8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recipeMeta add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "recipeId",
+									"value": "6260084d22d4769c38177622",
+									"type": "default"
+								},
+								{
+									"key": "nutritionInformation[calories]",
+									"value": "22gm",
+									"type": "default"
+								},
+								{
+									"key": "nutritionInformation[totalFat]",
+									"value": "22gm",
+									"type": "default"
+								},
+								{
+									"key": "nutritionInformation[protein]",
+									"value": "22gm",
+									"type": "default"
+								},
+								{
+									"key": "nutritionInformation[carbohydrate]",
+									"value": "22gm",
+									"type": "default"
+								},
+								{
+									"key": "ingredient[formaindish]",
+									"value": "testing",
+									"type": "default"
+								},
+								{
+									"key": "ingredient[formaindish]",
+									"value": "testing",
+									"type": "default"
+								},
+								{
+									"key": "ingredient[formaindish]",
+									"value": "testing",
+									"type": "default"
+								},
+								{
+									"key": "direction[0][directionTitle]",
+									"value": "direction title 1",
+									"type": "default"
+								},
+								{
+									"key": "direction[0][directionDescription]",
+									"value": "direction description 1",
+									"type": "default"
+								},
+								{
+									"key": "direction[0][directionImage]",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__03__20160328-channa-masala-recipe-6-ae4913c04d5b43e9acef2917a74aa5fc.jpg"
+								},
+								{
+									"key": "direction[1][directionTitle]",
+									"value": "direction title 2",
+									"type": "default"
+								},
+								{
+									"key": "direction[1][directionDescription]",
+									"value": "direction description 2",
+									"type": "default"
+								},
+								{
+									"key": "direction[1][directionImage]",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/dinner.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/addRecipesMeta",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"addRecipesMeta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "popularRecipes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/popularRecipes",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"popularRecipes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/searcRecipe?key=barbeque",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"searcRecipe"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "barbeque"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "roleId",
+									"value": "user",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "firstName",
+									"value": "testUser1",
+									"type": "default"
+								},
+								{
+									"key": "lastName",
+									"value": "user1",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "testuser1@123.com",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "784578485",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								},
+								{
+									"key": "Image",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/unknown2.jpg"
+								},
+								{
+									"key": "status",
+									"value": "pending",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "isDeleted",
+									"value": "",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "DeletedBy",
+									"value": "no",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/register",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/getAllUsers",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ankita.yadav2906@gmail.com\",\n    \"password\":\"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/signIn",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"deletedUserId\":\"62555111dafdf1fba57955de\",\n    \"deletedById\":\"62552f91174379e6a4fbd2d7\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/deleteUser",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "roleId",
+									"value": "admin",
+									"type": "default"
+								},
+								{
+									"key": "firstName",
+									"value": "shivani",
+									"type": "default"
+								},
+								{
+									"key": "lastName",
+									"value": "chourasiya",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "shivani@123.com",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "55465654",
+									"type": "default"
+								},
+								{
+									"key": "Image",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/unknown3.png"
+								},
+								{
+									"key": "status",
+									"value": "pending",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/edit-user?id=6285e4de400994c39b295549",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"edit-user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6285e4de400994c39b295549"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password link",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ankita.yadav2906@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/sendMail",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"sendMail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"9d8bca2f0d45fc544f29728d04df0175c5a56adf75222ff8ab05c874f75681ce\",\n    \"newPassword\":\"12345\",\n    \"confirmPassword\":\"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/resetPassword",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "status approved /delete",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"6257ef1240277d08b06404f6\",\n    \"ownerId\":\"6257de5a392d592384fed16e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/changeStatus?status=approved",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"changeStatus"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "approved"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Roles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"roleName\":\"user\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/roles/addRoles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"roles",
+								"addRoles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "blogs",
+			"item": [
+				{
+					"name": "get all blog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/getAllBlog",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"getAllBlog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create blog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "62661c2fa1668219ce595c92",
+									"type": "default"
+								},
+								{
+									"key": "categoryId",
+									"value": "62661c94a1668219ce595ccb",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "simple and delicious vagitarian  lasgana",
+									"type": "default"
+								},
+								{
+									"key": "subTitle",
+									"value": "Lorem Ipsum",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/istockphoto-157431311-612x612 (1).jpg"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/home/mangoit/Downloads/video.mp4"
+								},
+								{
+									"key": "blogFAQ[0][faqTitle]",
+									"value": "ttitle 1",
+									"type": "default"
+								},
+								{
+									"key": "blogFAQ[0][faqDescription]",
+									"value": "description 1",
+									"type": "default"
+								},
+								{
+									"key": "blogFAQ[0][faqImage]",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/breakfast.jpeg"
+								},
+								{
+									"key": "blogFAQ[1][faqTitle]",
+									"value": "title 2",
+									"type": "default"
+								},
+								{
+									"key": "blogFAQ[1][faqDescription]",
+									"value": "description 2",
+									"type": "default"
+								},
+								{
+									"key": "blogFAQ[1][faqImage]",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__03__20160328-channa-masala-recipe-6-ae4913c04d5b43e9acef2917a74aa5fc.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/addBlog",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"addBlog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one blog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/getBlog?id=62662069c0cdbb4616544b69",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"getBlog"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62662069c0cdbb4616544b69"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"blogId\":\"625f9d8e10f5d92d056c1793\",\n    \"ownerId\":\"625f9a492996bb6810e60fb6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/statusChanged?status=draft",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"statusChanged"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "draft"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update blog",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userId",
+									"value": "625d4cecb5c7276ed2d1d575",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "categoryId",
+									"value": "625d4d75b5c7276ed2d1d580",
+									"type": "default"
+								},
+								{
+									"key": "title",
+									"value": "simple and delicious vagitarian  lasgana",
+									"type": "default"
+								},
+								{
+									"key": "subTitle",
+									"value": "Lorem Ipsum",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/istockphoto-157431311-612x612 (1).jpg"
+								},
+								{
+									"key": "video",
+									"type": "file",
+									"src": "/home/mangoit/Downloads/video.mp4"
+								},
+								{
+									"key": "blogFAQ[0][faqTitle]",
+									"value": "ttitle 1",
+									"type": "default"
+								},
+								{
+									"key": "blogFAQ[0][faqDescription]",
+									"value": "description 1",
+									"type": "default"
+								},
+								{
+									"key": "blogFAQ[0][faqImage]",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/breakfast.jpeg"
+								},
+								{
+									"key": "blogFAQ[1][faqTitle]",
+									"value": "title 2",
+									"type": "default"
+								},
+								{
+									"key": "blogFAQ[1][faqDescription]",
+									"value": "description 2",
+									"type": "default"
+								},
+								{
+									"key": "blogFAQ[1][faqImage]",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__03__20160328-channa-masala-recipe-6-ae4913c04d5b43e9acef2917a74aa5fc.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/updateBlog?id=625d4cecb5c7276ed2d1d575",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"updateBlog"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "625d4cecb5c7276ed2d1d575"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "popular blog Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/popularBlog",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"popularBlog"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search blog Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/searchBlog?key=Lorem Ipsum",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"searchBlog"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "Lorem Ipsum"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "siteOptions",
+			"item": [
+				{
+					"name": "create siteOption",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Informationvbvbcccccccccccccccc",
+									"type": "default"
+								},
+								{
+									"key": "subTitle",
+									"value": "Lorem ipsum dolor sit amet consectetur adipisicing elit.bvvvvvvvvvvvvvvvvvvvvc",
+									"type": "default"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/logo.png"
+								},
+								{
+									"key": "copyRightText",
+									"value": "@2020 Flowbase.Powered by",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/addSitOptions",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"addSitOptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all siteOption",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/getAllSitOptions",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"getAllSitOptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update siteOption",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Home x",
+									"type": "default"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/home/mangoit/Desktop/nodeTask/pictures/logo.png"
+								},
+								{
+									"key": "copyRightText",
+									"value": "@2020 Flowbase.Powered by",
+									"type": "default"
+								},
+								{
+									"key": "subTitle",
+									"value": "Lorem ipsum dolor sit amet consectetur adipisicing elit.bvvvvvvvvvvvvvvvvvvvvc",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/edit-SitOptions?id=62667c744c66600328e9e7af",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"edit-SitOptions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62667c744c66600328e9e7af"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete siteOption",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/deleteSitOptions?id=62667ed84aec92a640dce942",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"deleteSitOptions"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "62667ed84aec92a640dce942"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subscription",
+			"item": [
+				{
+					"name": "unsubscribe user Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"prude.ankab@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/unSubscribedUser",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"unSubscribedUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscribeUser / node Copy",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FNAME\":\"ankita\",\n    \"LNAME\":\"y\",\n    \"email\":\"ankitay.yadav@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/subscribe",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"subscribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check  subscription status Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"ankitay.yadav@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://95.111.202.157:8001/api/checkStatus",
+							"protocol": "http",
+							"host": [
+								"95",
+								"111",
+								"202",
+								"157"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"checkStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contact page api Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"testing\",\n    \"subject\":\"testing\",\n    \"email\":\"testing\",\n    \"enquiryType\":\"testing\",\n    \"message\":\"testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://95.111.202.157:8001/api/addContactDetails",
+					"protocol": "http",
+					"host": [
+						"95",
+						"111",
+						"202",
+						"157"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"addContactDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
