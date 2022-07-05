@@ -9,7 +9,7 @@ function Recipes_api() {
       const response = await axios.get(
         "http://95.111.202.157:8001/api/v1/getAllRecipes"
       );
-      console.log("ajay", response);
+      console.log("ajay", response); 
 
       setPosts(response.data);
     };
